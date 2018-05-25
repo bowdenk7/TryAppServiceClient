@@ -1,5 +1,6 @@
 import { connect, Dispatch } from 'react-redux';
 import * as actions from '../actions';
+import { ISelectableBoxProps } from '../components/SelectableBoxComponent';
 import TemplatesComponent from '../components/TemplatesComponent';
 import { IStoreState } from '../types';
 
@@ -12,7 +13,7 @@ function mapStateToProps(state: IStoreState) {
 
 function mapDispatchToPros(dispatch: Dispatch<actions.TemplateAction>) {
     return {
-        onClick: () => dispatch(actions.selectTemplate())
+        onClick: (selectedTemplate: ISelectableBoxProps) => dispatch(actions.selectTemplate(selectedTemplate))
     };
 }
 

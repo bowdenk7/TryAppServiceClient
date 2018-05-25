@@ -9,7 +9,7 @@ import { templateReducer } from "./reducers/TemplatesReducer";
 import { IStoreState } from './types';
 
 const preloadedState = {
-    selectedTemplate: "",
+    selectedTemplate: {},
     templates: [{
         iconUrl: require("./assets/jsLogo.png"),
         isSelected: false,

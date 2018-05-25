@@ -2,4 +2,13 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  text-align: center;
+}
+
+button {
+    background-color: blue; /* TODO: Set the right color */
+    border: 1px solid transparent;
+    border-radius: 0;
+    color: #fff;
+    padding: 5px 20px;
 }

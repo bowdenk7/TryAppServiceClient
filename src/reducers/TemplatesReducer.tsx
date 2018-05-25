@@ -5,9 +5,18 @@ import { IStoreState } from '../types';
 export function templateReducer(state: IStoreState, action: TemplateAction): IStoreState {
     switch (action.type) {
         case constants.SELECT_TEMPLATE:
-            // tslint:disable-next-line:no-console
-            console.log('template selected');
-            return { ...state, selectedTemplate: state.selectedTemplate };
+            const newTemplates = state.templates.map(x => {
+                return {
+                    ...x,
+                    isSelected: x.name === action.selectedTemplate.name
+                };
+            });
+
+            return {
+                ...state,
+                selectedTemplate: { ...action.selectedTemplate },
+                templates: newTemplates
+            };
     }
 
     return state;
