@@ -2,6 +2,7 @@
   "name": "tryappserviceclient",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://wilkellytas.blob.core.windows.net/tas-host-test",
   "dependencies": {
     "@types/react-redux": "^6.0.0",
     "react": "^16.3.2",
